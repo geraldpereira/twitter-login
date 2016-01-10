@@ -1,16 +1,16 @@
 import {Component, View} from 'angular2/core';
 import {ViewEncapsulation} from 'angular2/core';
 import {FORM_PROVIDERS} from 'angular2/common';
-import {Layout} from './layout/layout';
-import {RouteConfig} from 'angular2/router';
-/*
- * App Component
- * Top Level Component
- */
+import {Login} from './login/login';
+import {Tweets} from './tweets/tweets';
+import {NavigationService} from './navigation/navigation';
+import {MATERIAL_DIRECTIVES, MATERIAL_PROVIDERS} from 'ng2-material/all';
+import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
+
 @Component({
     selector: 'app',
-    providers: [...FORM_PROVIDERS],
-    directives: [Layout],
+    providers: [...FORM_PROVIDERS, NavigationService, MATERIAL_PROVIDERS],
+    directives: [MATERIAL_DIRECTIVES, ROUTER_DIRECTIVES],
     pipes: [],
     styles: [
         require('../assets/css/index.scss')
@@ -19,10 +19,11 @@ import {RouteConfig} from 'angular2/router';
     template: require('./app.html')
 })
 @RouteConfig([
-    {path: '/', component: Layout, name: 'Index', data: {title: 'Index page'}},
-    {path: '/test1', component: Layout, name: 'Test1', data: {title: 'Test page 1'}},
-    {path: '/test2', component: Layout, name: 'Test2', data: {title: 'Test page 2'}},
-    {path: '/**', redirectTo: ['Index']}
+    {path: '/login', component: Login, name: 'Login', data: {title: 'Login Page'}},
+    {path: '/test2', component: Tweets, name: 'Tweets', data: {title: 'Tweet Page'}},
+    {path: '/**', redirectTo: ['Login']}
 ])
 export class App {
+    constructor(public navigation: NavigationService) {
+    }
 }
