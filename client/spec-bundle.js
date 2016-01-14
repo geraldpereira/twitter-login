@@ -41,3 +41,6 @@ testContext.keys().forEach(testContext);
 var domAdapter = require('angular2/src/platform/browser/browser_adapter');
 domAdapter.BrowserDomAdapter.makeCurrent();
 
+
+require('angular2/bundles/angular2-polyfills');
+require('angular2/testing');

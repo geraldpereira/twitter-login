@@ -1,13 +1,13 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'run', 'test' ]
 2 info using npm@2.14.12
 3 info using node@v4.2.4
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart angular2-webpack-starter@0.0.0
-6 info start angular2-webpack-starter@0.0.0
+4 verbose run-script [ 'pretest', 'test', 'posttest' ]
+5 info pretest angular2-webpack-starter@0.0.0
+6 info test angular2-webpack-starter@0.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info angular2-webpack-starter@0.0.0 Failed to exec start script
-9 verbose stack Error: angular2-webpack-starter@0.0.0 start: `npm run server:dev`
+8 info angular2-webpack-starter@0.0.0 Failed to exec test script
+9 verbose stack Error: angular2-webpack-starter@0.0.0 test: `karma start`
 9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
@@ -18,19 +18,19 @@
 9 verbose stack     at maybeClose (internal/child_process.js:818:16)
 9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 10 verbose pkgid angular2-webpack-starter@0.0.0
-11 verbose cwd /home/kojiro/workspace/meetweet
+11 verbose cwd /home/kojiro/workspace/twitter-login/client
 12 error Linux 3.19.0-43-generic
-13 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+13 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "test"
 14 error node v4.2.4
 15 error npm  v2.14.12
 16 error code ELIFECYCLE
-17 error angular2-webpack-starter@0.0.0 start: `npm run server:dev`
+17 error angular2-webpack-starter@0.0.0 test: `karma start`
 17 error Exit status 1
-18 error Failed at the angular2-webpack-starter@0.0.0 start script 'npm run server:dev'.
+18 error Failed at the angular2-webpack-starter@0.0.0 test script 'karma start'.
 18 error This is most likely a problem with the angular2-webpack-starter package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     npm run server:dev
+18 error     karma start
 18 error You can get their info via:
 18 error     npm owner ls angular2-webpack-starter
 18 error There is likely additional logging output above.
